@@ -1,0 +1,54 @@
+<div class="min-h-screen bg-gray-100 dark:text-gray-900">
+    <main>
+        <header class="bg-white dark:bg-gray-800 shadow">
+            <div class="max-w-7x1 mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <button class="font-semibold text-x1 text-gray-800 dark:text-gray-200 leading-tight" (click)="atras()">
+                    Atras
+                </button>
+            </div>
+        </header>
+
+        <div class="max-w-md mx-auto mt-6 rounded overflow-hidden shadow-lg bg-white p-6">
+            <h1 class="font-bold text-2xl mb-4">Crear Nueva Película</h1>
+                <div>
+                    <label for="nombre" class="block text-gray-700 text-sm font-semibold mb-2">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" value="{{movie.nombre}}" class="border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400" />
+                </div>
+                <div>
+                    <label for="sinopsis" class="block text-gray-700 text-sm font-semibold mb-2">Sinopsis:</label>
+                    <textarea id="sinopsis" name="sinopsis"  value="{{movie.sinonpsis}}" class="border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400"></textarea>
+                </div>
+                <div>
+                    <label class="block mb-2 text-sm font-medium text-gray-700 text-sm font-semibold mb-2" for="portada">Upload file:</label>
+                    <input class="input-field" id="portada" type="file">
+                </div>
+                <div>
+                    <label for="clasificacion" class="block text-gray-700 text-sm font-semibold mb-2">Clasificación:</label>
+                    <select id="clasificacion" class="select-field" >
+                        <option value="0">Selecciona una clasificación</option>
+                        @for (item of clasificaciones; track $index) {
+                            <option value="{{item.id}}">{{item.nombre}}</option>
+                        }
+                    </select>
+                </div>
+                <div>
+                    <label for="genero" class="block text-gray-700 text-sm font-semibold mb-2">Género:</label>
+                    <select id="generos" class="select-field">
+                        <option value="0">Selecciona un género</option>
+                        @for (item of generos; track $index) {
+                            <option value="{{item.id}}">{{item.nombre}}</option>
+                        }
+                    </select>
+                </div>
+                <div>
+                    <label for="fecha_estreno" class="block text-gray-700 text-sm font-semibold mb-2 ">Fecha de
+                        Estreno YYYY-MM-DD:</label>
+                    <input type="text" id="fecha_estreno" name="fechaEstreno"  value="{{movie.fecha_estreno}}" class="border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400" />
+                </div>
+                
+                <button type="submit" class="bg-blue-500 text-white p-2 rounded-md" (click)="createMovie()">
+                    Crear Película
+                </button>
+        </div>
+    </main>
+</div>
