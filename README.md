@@ -17,5 +17,4 @@ No se tiene un crud para géneros y clasificaciones.
 
 ---
 
-_Puedes personalizar y expandir esta descripción según las características específicas de tu aplicación._
 para el login si descargaste la api del github el usuario es Khaled y la contraseña baisa
