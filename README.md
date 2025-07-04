@@ -17,4 +17,4 @@ No se tiene un crud para géneros y clasificaciones.
 
 ---
 
-para el login si descargaste la api del github el usuario es Khaled y la contraseña baisa
+Para el login si descargaste la api del github el usuario es Khaled y la contraseña baisa
